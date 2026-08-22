@@ -22,6 +22,12 @@
       div {
         background-color: blue;
       }
+      .button {
+        flex-basis: 0%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body>
@@ -30,11 +36,11 @@
       <input type="text"></input>
     </div>
     <div style="flex-basis: 100px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;align-items: stretch">
-      <div style="flex-basis: 0%;flex-grow: 1;border: 1px solid black;">Test1</div>
-      <div style="flex-basis: 0%;flex-grow: 1;border: 1px solid black;">Test1aaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-      <div style="flex-basis: 0%;flex-grow: 1;border: 1px solid black;">Test1</div>
-      <div style="flex-basis: 0%;flex-grow: 1;border: 1px solid black;">Test1</div>
-      <div style="flex-basis: 0%;flex-grow: 1;border: 1px solid black;">Test1</div>
+      <div class="button">Test1</div>
+      <div class="button">Test1aaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+      <div class="button">Test1</div>
+      <div class="button">Test1</div>
+      <div class="button">Test1</div>
     </div>
   </body>
 </html>
