@@ -34,7 +34,7 @@
   <body>
     <div style="flex-grow: 1">
       <span>Test1</span>
-      <input type="text"></input>
+      <input type="text" id="in1"></input>
     </div>
     <div style="flex-basis: 100px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;align-items: stretch">
       <div class="button">Test1</div>
@@ -44,4 +44,180 @@
       <div class="button">Test1</div>
     </div>
   </body>
+  <script>
+    const eventListeners = new Map();
+    function addEventListener(obj, eventName, handler) {
+      let eventDictionary = eventListeners.get(obj);
+      if (!eventDictionary) {
+        eventDictionary = new Map();
+        eventListeners.set(obj, eventDictionary);
+      }
+      let eventSet = eventDictionary.get(eventName);
+      if (!eventSet) {
+        eventSet = new Set();
+        eventDictionary.set(eventName, eventSet);
+      }
+      eventSet.add(handler);
+      obj.addEventListener(eventName, handler);
+    }
+    function removeAllEventListeners() {
+      for (const [ obj, eventDictionary] of eventListeners) {
+        for (const [ eventName, eventSet ] of eventDictionary) {
+          for (const handler of eventSet) {
+            obj.removeEventListener(eventName, handler);
+          }
+        }
+      }
+    }
+    // Printing
+    addEventListener(window, "beforeprint", (evt) => {
+      
+    });
+    addEventListener(window, "afterprint", (evt) => {
+      
+    });
+    // Focus
+    addEventListener(window, "blur", (evt) => {
+      
+    });
+    addEventListener(window, "focus", (evt) => {
+      
+    });
+    // Web App
+    addEventListener(window, "appinstalled", (evt) => {
+      
+    });
+    addEventListener(window, "beforeinstallprompt", (evt) => {
+      
+    });
+    // Motion & Orientation
+    addEventListener(window, "devicemotion", (evt) => {
+      
+    });
+    addEventListener(window, "deviceorientation", (evt) => {
+      
+    });
+    addEventListener(window, "deviceorientationabsolute", (evt) => {
+      
+    });
+    // Gamepad interface
+    addEventListener(window, "gamepadconnected", (evt) => {
+      
+    });
+    addEventListener(window, "gamepaddisconnected", (evt) => {
+      
+    });
+    // location fragment
+    addEventListener(window, "hashchange", (evt) => {
+      
+    });
+    // document language
+    addEventListener(window, "languagechange", (evt) => {
+      
+    });
+    // Loading
+    addEventListener(window, "load", (evt) => {
+      
+    });
+    addEventListener(document, "DOMContentLoaded", (evt) => {
+      
+    });
+    addEventListener(document, "readystatechange", (evt) => {
+      
+    });
+    // Messaging
+    addEventListener(window, "message", (evt) => {
+      
+    });
+    addEventListener(window, "messageerror", (evt) => {
+      
+    });
+    // Online status
+    addEventListener(window, "offline", (evt) => {
+      
+    });
+    addEventListener(window, "online", (evt) => {
+      
+    });
+    // Page Navigation
+    addEventListener(window, "pagehide", (evt) => {
+      
+    });
+    addEventListener(window, "pagereveal", (evt) => {
+      
+    });
+    addEventListener(window, "pageshow", (evt) => {
+      
+    });
+    addEventListener(window, "pageswap", (evt) => {
+      
+    });
+    // History
+    addEventListener(window, "popstate", (evt) => {
+      
+    });
+    // Resize
+    addEventListener(window, "resize", (evt) => {
+      
+    });
+    // Storage
+    addEventListener(window, "storage", (evt) => {
+      
+    });
+    // Errors
+    addEventListener(window, "error", (evt) => {
+      
+    });
+    addEventListener(window, "rejectionhandled", (evt) => {
+      
+    });
+    addEventListener(window, "unhandledrejection", (evt) => {
+      
+    });
+    // Unloading
+    addEventListener(window, "beforeunload", (evt) => {
+      
+    });
+    addEventListener(window, "unload", (evt) => {
+      
+    });
+    // Fullscreen
+    addEventListener(document, "fullscreenchange", (evt) => {
+      
+    });
+    addEventListener(document, "fullscreenerror", (evt) => {
+      
+    });
+    // Pointer Lock
+    addEventListener(document, "pointerlockchange", (evt) => {
+      
+    });
+    addEventListener(document, "pointerlockerror", (evt) => {
+      
+    });
+    // Scroll
+    addEventListener(document, "scroll", (evt) => {
+      
+    });
+    addEventListener(document, "scrollend", (evt) => {
+      
+    });
+    // CSP
+    addEventListener(document, "securitypolicyviolation", (evt) => {
+      
+    });
+    // Selection
+    addEventListener(document, "selectionchange", (evt) => {
+      
+    });
+    // Visibility
+    addEventListener(document, "visibilitychange", (evt) => {
+      
+    });
+
+
+      document.body.addEventListener();
+    const in1 = document.getElementById("in1");
+    in1.addEventListener();
+  </script>
 </html>
